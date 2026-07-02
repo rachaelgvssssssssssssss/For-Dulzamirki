@@ -1,0 +1,17 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'JetBrains Mono',monospace;background:#050505;color:#7CFF7C;height:100vh;overflow:hidden}
+#background{position:fixed;inset:0;background:radial-gradient(circle at top,#111,#050505 70%);z-index:-2}
+#stars{position:fixed;inset:0;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:40px 40px;opacity:.15;z-index:-1}
+section{display:flex;justify-content:center;align-items:center;height:100vh}
+.terminal{width:min(950px,92%);height:85vh;background:#111;border:1px solid #222;border-radius:16px;box-shadow:0 0 30px rgba(0,255,120,.15);overflow:hidden}
+.terminal-header{height:48px;background:#1b1b1b;display:flex;align-items:center;padding:0 16px}
+.red,.yellow,.green{width:12px;height:12px;border-radius:50%;margin-right:8px}.red{background:#ff5f56}.yellow{background:#ffbd2f}.green{background:#27c93f}
+.terminal-body{padding:28px;height:calc(100% - 48px);overflow:auto}
+#terminalOutput{white-space:pre-wrap;line-height:1.8}
+button{margin-top:24px;padding:12px 24px;background:transparent;border:1px solid #7CFF7C;color:#7CFF7C;border-radius:8px;cursor:pointer}
+button:hover{background:#7CFF7C;color:#111}
+#storyScreen,#memoryScreen,#endingScreen{display:none}
+.slider{max-width:900px;width:90%}.slider img{width:100%;border-radius:16px}
+#endingScreen{flex-direction:column;text-align:center}
+.fade{animation:fade .8s}@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.cursor{display:inline-block;width:10px;height:18px;background:#7CFF7C;animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
