@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
     <meta charset="UTF-8">
@@ -7,201 +8,125 @@
 
     <title>The Last Page</title>
 
-    <!-- Font Terminal -->
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<!-- Background -->
-<div id="background"></div>
+    <!-- Background -->
+    <div id="background"></div>
 
-<!-- Terminal -->
-<div id="terminal">
+    <!-- Stars -->
+    <div id="stars"></div>
 
-    <div id="terminal-header">
+    <!-- Terminal -->
+    <section id="terminalScreen">
 
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
+        <div class="terminal">
 
-        <span>terminal</span>
+            <div class="terminal-header">
 
-    </div>
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
 
-    <div id="terminal-body">
+                <p>The Last Page</p>
 
-        <pre id="terminalText"></pre>
+            </div>
 
-        <button id="startButton">
+            <div class="terminal-body">
 
-            Press ENTER
+                <pre id="terminalOutput"></pre>
+
+                <button id="startBtn">
+
+                    Press ENTER
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Story -->
+    <section id="storyScreen">
+
+        <div id="storyContainer">
+
+        </div>
+
+    </section>
+
+    <!-- Memories -->
+    <section id="memoryScreen">
+
+        <h2>Our Memories</h2>
+
+        <div class="slider">
+
+            <img id="memoryImage" src="photos/1.jpg">
+
+        </div>
+
+        <p id="memoryCaption"></p>
+
+        <button id="nextMemory">
+
+            Continue →
 
         </button>
 
-    </div>
+    </section>
 
-</div>
+    <!-- Ending -->
+    <section id="endingScreen">
 
-<!-- Story -->
-<div id="story" class="hidden">
+        <h1>
 
-    <div class="story-line">Initializing...</div>
+            Happy Birthday
 
-    <div class="story-line">Loading memories...</div>
+        </h1>
 
-    <div class="story-line">Loading laughter...</div>
+        <h2>
 
-    <div class="story-line">Loading every reason I love you...</div>
+            Wildan Alicondro Dulzamirki
 
-    <div class="story-line">████████████████ 100%</div>
+        </h2>
 
-    <div class="story-line access">
-        Access Granted
-    </div>
+        <p>
 
-    <br>
+            Selamat datang di usia tiga puluh.
 
-    <div class="story-line">SYSTEM BOOT SUCCESS</div>
+        </p>
 
-    <div class="story-line">Scanning...</div>
+        <p>
 
-    <div class="story-line">Identity Verified</div>
+            Semoga semua doa yang kamu simpan,
+            satu per satu menemukan jalannya.
 
-    <div class="story-line">
-        Name : Wildan Alicondro Dulzamirki
-    </div>
+        </p>
 
-    <div class="story-line">
-        Current Age : 30
-    </div>
+        <button id="restart">
 
-    <div class="story-line">
-        Status : Birthday Detected
-    </div>
+            Replay
 
-    <br>
+        </button>
 
-    <div class="story-line">
-        Checking life progress...
-    </div>
+    </section>
 
-    <div class="story-line">
-        Childhood ✔
-    </div>
-
-    <div class="story-line">
-        Teenage Years ✔
-    </div>
-
-    <div class="story-line">
-        Twenties ✔
-    </div>
-
-    <div class="story-line">
-        Preparing next chapter...
-    </div>
-
-    <br>
-
-    <div class="story-line message">
-        Selamat telah menuntaskan halaman terakhir usia dua puluhan, sayang.
-    </div>
-
-    <div class="story-line message">
-        Tidak semua perjalanan selalu mudah.
-    </div>
-
-    <div class="story-line message">
-        Tapi kamu berhasil sampai di titik ini.
-    </div>
-
-    <div class="story-line message">
-        Dan aku harap, kamu bangga pada dirimu sendiri.
-    </div>
-
-    <br>
-
-    <div class="story-line">
-        Analyzing...
-    </div>
-
-    <div class="story-line">
-        Result:
-    </div>
-
-    <br>
-
-    <div class="story-line message">
-        Selama tiga puluh tahun ini,
-    </div>
-
-    <div class="story-line message">
-        kamu telah bertumbuh menjadi seseorang yang luar biasa.
-    </div>
-
-    <div class="story-line message">
-        Mungkin masih ada mimpi yang belum tercapai.
-    </div>
-
-    <div class="story-line message">
-        Mungkin masih ada banyak hal yang sedang kamu perjuangkan.
-    </div>
-
-    <div class="story-line message">
-        Tapi percayalah...
-    </div>
-
-    <div class="story-line message">
-        Kamu sudah berjalan sangat jauh.
-    </div>
-
-    <br>
-
-    <div class="story-line">
-        Searching birthday gift...
-    </div>
-
-    <div class="story-line">
-        Gift detected.
-    </div>
-
-    <div class="story-line">
-        Opening...
-    </div>
-
-    <br>
-
-    <div class="story-line message">
-        Aku sempat berpikir...
-    </div>
-
-    <div class="story-line message">
-        Hadiah apa yang pantas untukmu?
-    </div>
-
-    <div class="story-line message">
-        Setelah lama mencari,
-    </div>
-
-    <div class="story-line message">
-        akhirnya aku sadar...
-    </div>
-
-    <div class="story-line message">
-        Tidak ada hadiah yang lebih berarti selain mengingatkanmu bahwa kamu sangat dicintai.
-    </div>
-
-    <div class="story-line message">
-        Jadi, aku membuat tempat kecil ini khusus untukmu.
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+    <!-- JS -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
